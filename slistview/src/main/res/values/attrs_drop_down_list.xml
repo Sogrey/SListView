@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    isDropDownStyle表示是否允许下拉样式，java代码中可自定义下拉listener，表示需要完成的任务
+    isOnBottomStyle表示是否允许底部样式，java代码中可自定义滚动到底部的listener，表示需要完成的任务
+    isAutoLoadOnBottom表示是否允许滚动到底部时自动执行对应listener，仅在isOnBottomStyle为true时有效
+
+    PS：如果isDropDownStyle或isOnBottomStyle为false，并不会加载对应的布局，所以性能同ListView一样。-->
+    <declare-styleable name="drop_down_list_attr">
+        <attr name="isDropDownStyle" format="boolean"/><!--是否開啟下拉刷新-->
+        <attr name="isOnBottomStyle" format="boolean"/><!--是否開啟上拉刷新-->
+        <attr name="isAutoLoadOnBottom" format="boolean"/><!--是否到底自動刷新-->
+        <attr name="isCorner" format="boolean"/><!--是否圓角-->
+        <attr name="bg" format="integer"/><!--背景資源Id-->
+        <attr name="slideContentView" format="integer"/><!--資源Id-->
+    </declare-styleable>
+
+</resources>

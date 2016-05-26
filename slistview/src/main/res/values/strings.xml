@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SListView</string>
+
+    <!--drop_down_list-->
+    <string name="drop_down_list_header_default_text">点击刷新&#8230;</string>
+    <string name="drop_down_list_header_pull_text">下拉刷新&#8230;</string>
+    <string name="drop_down_list_header_release_text">松开刷新&#8230;</string>
+    <string name="drop_down_list_header_loading_text">刷新中&#8230;</string>
+    <string name="drop_down_list_footer_default_text">加载更多</string>
+    <string name="drop_down_list_footer_loading_text">刷新中&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">暂无更多数据</string>
+    <string name="image_content">Image</string>
+    <string name="update_at">更新时间:</string>
+</resources>
