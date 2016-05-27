@@ -38,9 +38,9 @@ public class MyAdapter extends BaseAdapter{
         View view = convertView;
         ViewHolder holder = null;
         if (view==null){
-            view = View.inflate(mContext,R.layout.item,null);
+            view=View.inflate(mContext,R.layout.item_list_app,null);
             holder = new ViewHolder();
-            holder.txt =(TextView) view.findViewById(R.id.txt_item_text);
+            holder.txt=(TextView)view.findViewById(R.id.tv_name);
             view.setTag(holder);
         }else{
             holder = (ViewHolder)view.getTag();

@@ -12,7 +12,6 @@
         <attr name="isAutoLoadOnBottom" format="boolean"/><!--是否到底自動刷新-->
         <attr name="isCorner" format="boolean"/><!--是否圓角-->
         <attr name="bg" format="integer"/><!--背景資源Id-->
-        <attr name="slideContentView" format="integer"/><!--資源Id-->
     </declare-styleable>
 
 </resources>

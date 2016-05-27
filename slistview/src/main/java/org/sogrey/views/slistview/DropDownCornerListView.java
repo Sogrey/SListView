@@ -98,8 +98,6 @@ public class DropDownCornerListView extends ListView implements OnScrollListener
     private ProgressBar    footerProgressBar;
     private Button         footerButton;
 
-    private SlideView mFocusedItemView;
-
     private OnDropDownListener onDropDownListener;
     private OnScrollListener   onScrollListener;
 
@@ -457,14 +455,6 @@ public class DropDownCornerListView extends ListView implements OnScrollListener
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 actionDownPointY=event.getY();
-
-                int x=(int)event.getX();
-                int y=(int)event.getY();
-                int position=pointToPosition(x,y);
-                if (position!=INVALID_POSITION) {
-                    MessageItem data=(MessageItem)getItemAtPosition(position);
-                    mFocusedItemView=data.slideView;
-                }
                 break;
             case MotionEvent.ACTION_MOVE:
                 adjustHeaderPadding(event);
@@ -502,10 +492,6 @@ public class DropDownCornerListView extends ListView implements OnScrollListener
                     }
                 }
                 break;
-        }
-
-        if (mFocusedItemView!=null) {
-            mFocusedItemView.onRequireTouchEvent(event);
         }
 
 
@@ -1098,7 +1084,6 @@ public class DropDownCornerListView extends ListView implements OnScrollListener
         isAutoLoadOnBottom=ta.getBoolean(R.styleable.drop_down_list_attr_isAutoLoadOnBottom,false);
         isCorner=ta.getBoolean(R.styleable.drop_down_list_attr_isCorner,false);
         bg=ta.getResourceId(R.styleable.drop_down_list_attr_bg,-1);
-       int slideContentView=ta.getResourceId(R.styleable.drop_down_list_attr_bg,-1);
         if (isCorner) {
             if (bg==-1) {//默認
                 setBackgroundResource(R.drawable.bg_lyt_white_corner);
@@ -1107,25 +1092,6 @@ public class DropDownCornerListView extends ListView implements OnScrollListener
             }
         }
         ta.recycle();
-    }
-
-    //slide
-    public void shrinkListItem(int position) {
-        View item=getChildAt(position);
-
-        if (item!=null) {
-            try {
-                ((SlideView)item).shrink();
-            } catch (ClassCastException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public class MessageItem<T> {
-
-        public T         itemData;
-        public SlideView slideView;
     }
 
 }

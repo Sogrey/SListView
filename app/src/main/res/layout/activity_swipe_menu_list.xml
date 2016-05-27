@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,18 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.sogrey.views.slistview.demo.MainActivity">
+    tools:context="org.sogrey.views.slistview.demo.SwipeMenuListActivity">
 
-    <org.sogrey.views.slistview.DropDownCornerListView
-        android:id="@+id/lst_ddcl"
+    <org.sogrey.views.slistview.PullToRefreshSwipeMenuListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:bg="@drawable/bg_lyt_white_corner"
-        app:isAutoLoadOnBottom="true"
-        app:isCorner="true"
-        app:isDropDownStyle="true"
-        app:isOnBottomStyle="true"
-        >
+        android:id="@+id/lst_smlv_content"
+        android:layout_height="match_parent">
 
-    </org.sogrey.views.slistview.DropDownCornerListView>
+    </org.sogrey.views.slistview.PullToRefreshSwipeMenuListView>
 </RelativeLayout>
